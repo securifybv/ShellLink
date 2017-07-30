@@ -38,6 +38,47 @@ namespace ShellLink.Internal
         public static extern UInt32 SHGetNameFromIDList(byte[] pidl, SIGDN sigdnName, out IntPtr ppszName);
 
         /// <summary>
+        /// Retrieves the display name of an item identified by its IDList.
+        /// </summary>
+        /// <param name="pidl">A PIDL that identifies the item.</param>
+        /// <param name="sigdnName">A value from the SIGDN enumeration that specifies the type of display name 
+        /// to retrieve.</param>
+        /// <param name="ppszName">A value that, when this function returns successfully, receives the address 
+        /// of a pointer to the retrieved display name.</param>
+        /// <returns></returns>
+        [DllImport("shell32.dll", SetLastError = true)]
+        public static extern UInt32 SHGetNameFromIDList(IntPtr pidl, SIGDN sigdnName, out IntPtr ppszName);
+
+        /// <summary>
+        /// Retrieves the path of a known folder as an ITEMIDLIST structure.
+        /// </summary>
+        /// <param name="rfid">A reference to the KNOWNFOLDERID that identifies the folder. The folders associated 
+        /// with the known folder IDs might not exist on a particular system.</param>
+        /// <param name="dwFlags">Flags that specify special retrieval options. This value can be 0; otherwise, 
+        /// it is one or more of the KNOWN_FOLDER_FLAG values.></param>
+        /// <param name="hToken">An access token used to represent a particular user. This parameter is usually 
+        /// set to NULL, in which case the function tries to access the current user's instance of the folder. 
+        /// However, you may need to assign a value to hToken for those folders that can have multiple users but
+        /// are treated as belonging to a single user. The most commonly used folder of this type is Documents.
+        /// 
+        /// The calling application is responsible for correct impersonation when hToken is non-null. It must have 
+        /// appropriate security privileges for the particular user, including TOKEN_QUERY and TOKEN_IMPERSONATE, 
+        /// and the user's registry hive must be currently mounted. See Access Control for further discussion of 
+        /// access control issues.
+        /// 
+        /// Assigning the hToken parameter a value of -1 indicates the Default User.This allows clients of 
+        /// SHGetKnownFolderIDList to find folder locations (such as the Desktop folder) for the Default User.
+        /// The Default User user profile is duplicated when any new user account is created, and includes special 
+        /// folders such as Documents and Desktop.Any items added to the Default User folder also appear in any 
+        /// new user account.Note that access to the Default User folders requires administrator privileges.</param>
+        /// <param name="pszPath">When this method returns, contains a pointer to the PIDL of the folder. 
+        /// This parameter is passed uninitialized. The caller is responsible for freeing the returned PIDL when 
+        /// it is no longer needed by calling ILFree.</param>
+        /// <returns></returns>
+        [DllImport("shell32.dll")]
+        public static extern int SHGetKnownFolderIDList([MarshalAs(UnmanagedType.LPStruct)] Guid rfid, uint dwFlags, IntPtr hToken, out IntPtr ppidl);
+
+        /// <summary>
         /// Frees a block of task memory previously allocated through a call to the CoTaskMemAlloc or 
         /// CoTaskMemRealloc function.
         /// </summary>

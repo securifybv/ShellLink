@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Text;
+using ShellLink.Const;
 
 namespace ShellLink.Structures
 {
@@ -72,6 +73,8 @@ namespace ShellLink.Structures
         {
             StringBuilder builder = new StringBuilder();
             builder.Append(base.ToString());
+            builder.AppendFormat("DisplayName: {0}", KNOWNFOLDERID.GetDisplayName(KnownFolderID));
+            builder.AppendLine();
             builder.AppendFormat("KnownFolderID: {0}", KnownFolderID);
             builder.AppendLine();
             builder.AppendFormat("Offset: {0} (0x{0:X})", Offset);
