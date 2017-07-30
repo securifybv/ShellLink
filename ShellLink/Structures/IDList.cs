@@ -149,6 +149,30 @@ namespace ShellLink.Structures
         }
         #endregion // DisplayName
 
+        #region GetOffsetByIndex
+        /// <summary>
+        /// Gets the offset in bytes into the ItemIDList
+        /// </summary>
+        /// <param name="Index">Index into the ItemIDList</param>
+        /// <returns></returns>
+        public UInt32 GetOffsetByIndex(int Index)
+        {
+            uint Offset = 0;
+
+            if(Index < 0 || Index >= ItemIDList.Count)
+            {
+                throw new ArgumentOutOfRangeException(String.Format("Invalid index {0} provided", Index));
+            }
+
+            for(int i = 0; i < Index; i++)
+            {
+                Offset += ItemIDList[i].ItemIDSize;
+            }
+
+            return Offset;
+        }
+        #endregion // GetOffsetByIndex
+
         #region GetBytes
         /// <inheritdoc />
         public override byte[] GetBytes()

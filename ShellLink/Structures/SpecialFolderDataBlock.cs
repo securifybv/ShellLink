@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Text;
+using ShellLink.Flags;
 
 namespace ShellLink.Structures
 {
@@ -21,7 +22,7 @@ namespace ShellLink.Structures
         /// </summary>
         /// <param name="SpecialFolderID">nsigned integer that specifies the folder integer ID.</param>
         /// <param name="Offset">The offset, in bytes, into the link target IDList.</param>
-        public SpecialFolderDataBlock(UInt32 SpecialFolderID, UInt32 Offset) : base()
+        public SpecialFolderDataBlock(CSIDL SpecialFolderID, UInt32 Offset) : base()
         {
             this.SpecialFolderID = SpecialFolderID;
             this.Offset = Offset;
@@ -44,7 +45,7 @@ namespace ShellLink.Structures
         /// SpecialFolderID (4 bytes): A 32-bit, unsigned integer that specifies the folder 
         /// integer ID.
         /// </summary>
-        public UInt32 SpecialFolderID { get; set; }
+        public CSIDL SpecialFolderID { get; set; }
 
         /// <summary>
         /// Offset (4 bytes): A 32-bit, unsigned integer that specifies the location of the 
@@ -60,7 +61,7 @@ namespace ShellLink.Structures
             byte[] SpecialFolderDataBlock = new byte[BlockSize];
             Buffer.BlockCopy(BitConverter.GetBytes(BlockSize), 0, SpecialFolderDataBlock, 0, 4);
             Buffer.BlockCopy(BitConverter.GetBytes((UInt32)BlockSignature), 0, SpecialFolderDataBlock, 4, 4);
-            Buffer.BlockCopy(BitConverter.GetBytes(SpecialFolderID), 0, SpecialFolderDataBlock, 8, 4);
+            Buffer.BlockCopy(BitConverter.GetBytes((UInt32)SpecialFolderID), 0, SpecialFolderDataBlock, 8, 4);
             Buffer.BlockCopy(BitConverter.GetBytes(Offset), 0, SpecialFolderDataBlock, 12, 4);
             return SpecialFolderDataBlock;
         }
@@ -106,7 +107,7 @@ namespace ShellLink.Structures
                 throw new ArgumentException(String.Format("BlockSignature is {0} is incorrect (expected {1})", BlockSignature, SpecialFolderDataBlock.BlockSignature));
             }
 
-            SpecialFolderDataBlock.SpecialFolderID = BitConverter.ToUInt32(ba, 8);
+            SpecialFolderDataBlock.SpecialFolderID = (CSIDL)BitConverter.ToUInt32(ba, 8);
             SpecialFolderDataBlock.Offset = BitConverter.ToUInt32(ba, 12);
 
             return SpecialFolderDataBlock;

