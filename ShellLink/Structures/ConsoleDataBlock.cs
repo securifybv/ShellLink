@@ -103,6 +103,10 @@ namespace ShellLink.Structures
         /// in the console window.
         /// </summary>
         public FontFamily FontFamily { get; set; }
+        /// <summary>
+        /// A bitwise OR of one or more of the following font-pitch bits is added to the font family
+        /// </summary>
+        public FontPitch FontPitch { get; set; }
 
         /// <summary>
         /// FontWeight (4 bytes): A 16-bit, unsigned integer that specifies the stroke weight of the 
@@ -213,7 +217,7 @@ namespace ShellLink.Structures
             Buffer.BlockCopy(BitConverter.GetBytes(Unused1), 0, ConsoleDataBlock, 24, 4);
             Buffer.BlockCopy(BitConverter.GetBytes(Unused2), 0, ConsoleDataBlock, 28, 4);
             Buffer.BlockCopy(BitConverter.GetBytes(FontSize), 0, ConsoleDataBlock, 32, 4);
-            Buffer.BlockCopy(BitConverter.GetBytes((UInt32)FontFamily), 0, ConsoleDataBlock, 36, 4);
+            Buffer.BlockCopy(BitConverter.GetBytes((UInt32)FontFamily | (UInt32)FontPitch), 0, ConsoleDataBlock, 36, 4);
             Buffer.BlockCopy(BitConverter.GetBytes(FontWeight), 0, ConsoleDataBlock, 40, 4);
             Buffer.BlockCopy(Encoding.Unicode.GetBytes(FaceName), 0, ConsoleDataBlock, 44, FaceName.Length < 32 ? FaceName.Length * 2 : 62);
             Buffer.BlockCopy(BitConverter.GetBytes(CursorSize), 0, ConsoleDataBlock, 108, 4);
@@ -255,6 +259,8 @@ namespace ShellLink.Structures
             builder.AppendFormat("FontSize: {0}", FontSize);
             builder.AppendLine();
             builder.AppendFormat("FontFamily: {0}", FontFamily);
+            builder.AppendLine();
+            builder.AppendFormat("FontPitch: {0}", FontPitch);
             builder.AppendLine();
             builder.AppendFormat("FontWeight: {0}", FontWeight);
             builder.AppendLine();
@@ -320,7 +326,8 @@ namespace ShellLink.Structures
             ConsoleDataBlock.Unused1 = BitConverter.ToUInt32(ba, 24);
             ConsoleDataBlock.Unused2 = BitConverter.ToUInt32(ba, 28);
             ConsoleDataBlock.FontSize = BitConverter.ToUInt32(ba, 32);
-            ConsoleDataBlock.FontFamily = (FontFamily)BitConverter.ToUInt32(ba, 36);
+            ConsoleDataBlock.FontFamily = (FontFamily)(BitConverter.ToUInt32(ba, 36) & 0xF0);
+            ConsoleDataBlock.FontPitch = (FontPitch)(BitConverter.ToUInt32(ba, 36) &0xF);
             ConsoleDataBlock.FontWeight = BitConverter.ToUInt32(ba, 40);
             byte[] FaceName = new byte[64];
             Buffer.BlockCopy(ba, 44, FaceName, 0, 64);

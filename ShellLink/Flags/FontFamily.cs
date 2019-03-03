@@ -6,7 +6,7 @@ namespace ShellLink.Flags
     /// FontFamily (4 bytes): A 32-bit, unsigned integer that specifies the family of the 
     /// font used in the console window.
     /// </summary>
-    public enum FontFamily: UInt32
+    public enum FontFamily : UInt32
     {
         /// <summary>
         /// The font family is unknown.
