@@ -71,7 +71,7 @@ namespace ShellLink.Internal
         /// The Default User user profile is duplicated when any new user account is created, and includes special 
         /// folders such as Documents and Desktop.Any items added to the Default User folder also appear in any 
         /// new user account.Note that access to the Default User folders requires administrator privileges.</param>
-        /// <param name="pszPath">When this method returns, contains a pointer to the PIDL of the folder. 
+        /// <param name="ppidl">When this method returns, contains a pointer to the PIDL of the folder. 
         /// This parameter is passed uninitialized. The caller is responsible for freeing the returned PIDL when 
         /// it is no longer needed by calling ILFree.</param>
         /// <returns></returns>
