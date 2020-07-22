@@ -3,7 +3,7 @@ A .NET Class Library for processing ShellLink (LNK) files as documented in [MS-S
 
 Note this Class Library depends on the [PropertyStore](https://github.com/securifybv/PropertyStore) Class Library.
 
-![.NET Core](https://github.com/ykoster/ShellLink/workflows/.NET%20Core/badge.svg)
+![.NET Core](https://github.com/securifybv/ShellLink/workflows/.NET%20Core/badge.svg)
 
 ## Examples
 
