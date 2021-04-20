@@ -21,6 +21,6 @@ jobs:
       with:
         dotnet-version: 3.1.301
     - name: Install dependencies
-      run: dotnet restore ./ShellLink/ShellLink.csproj
+      run: dotnet restore ./Securify.ShellLink.csproj
     - name: Build
-      run: dotnet build --configuration Release --no-restore ./ShellLink/ShellLink.csproj
+      run: dotnet build --configuration Release --no-restore ./Securify.ShellLink.csproj
