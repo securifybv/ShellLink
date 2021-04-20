@@ -13,7 +13,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\PropertyStore\PropertyStore.csproj" />
+    <PackageReference Include="Securify.PropertyStore" Version="1.1.0" />
   </ItemGroup>
 
 </Project>

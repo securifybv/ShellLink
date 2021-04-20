@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text;
-using PropertyStore;
-using PropertyStore.Structures;
+using Securify.PropertyStore;
+using Securify.PropertyStore.Structures;
 using System.Collections.Generic;
 
 namespace ShellLink.Structures
