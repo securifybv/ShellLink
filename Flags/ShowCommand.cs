@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ShellLink.Flags
+namespace Securify.ShellLink.Flags
 {
     /// <summary>
     /// ShowCommand (4 bytes): A 32-bit unsigned integer that specifies the expected

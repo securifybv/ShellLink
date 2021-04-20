@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Text;
-using ShellLink.Internal;
+using Securify.ShellLink.Internal;
 
-namespace ShellLink.Structures
+namespace Securify.ShellLink.Structures
 {
     /// <summary>
     /// TerminalBlock (4 bytes): A 32-bit, unsigned integer that indicates the end of 

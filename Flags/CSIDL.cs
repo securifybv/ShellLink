@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ShellLink.Flags
+namespace Securify.ShellLink.Flags
 {
     /// <summary>
     /// CSIDL (constant special item ID list) values provide a unique system-independent way to identify special 

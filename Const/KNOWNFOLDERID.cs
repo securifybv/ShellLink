@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using ShellLink.Internal;
+using Securify.ShellLink.Internal;
 using System.Runtime.InteropServices;
 
-namespace ShellLink.Const
+namespace Securify.ShellLink.Const
 {
     /// <summary>
     /// The KNOWNFOLDERID constants represent GUIDs that identify standard folders registered with the system as Known Folders. 

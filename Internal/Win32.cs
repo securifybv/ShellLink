@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.InteropServices;
 
-namespace ShellLink.Internal
+namespace Securify.ShellLink.Internal
 {
     /// <summary>
     /// Win32 interop

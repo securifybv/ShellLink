@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ShellLink.Flags
+namespace Securify.ShellLink.Flags
 {
     /// <summary>
     /// LinkInfoFlags (4 bytes): Flags that specify whether the VolumeID, LocalBasePath, LocalBasePathUnicode, 

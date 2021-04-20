@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text;
 
-namespace ShellLink.Structures
+namespace Securify.ShellLink.Structures
 {
     /// <summary>
     /// The TrackerDataBlock structure specifies data that can be used to resolve a link target 

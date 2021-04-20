@@ -1,4 +1,4 @@
-﻿namespace ShellLink.Flags
+﻿namespace Securify.ShellLink.Flags
 {
     /// <summary>
     /// NetworkProviderType (4 bytes): A 32-bit, unsigned integer that specifies the type of 

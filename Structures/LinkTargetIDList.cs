@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace ShellLink.Structures
+namespace Securify.ShellLink.Structures
 {
     /// <summary>
     /// The LinkTargetIDList structure specifies the target of the link. The presence of this 

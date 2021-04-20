@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Text;
-using ShellLink.Const;
+using Securify.ShellLink.Const;
 
-namespace ShellLink.Structures
+namespace Securify.ShellLink.Structures
 {
     /// <summary>
     /// The KnownFolderDataBlock structure specifies the location of a known folder. This data can be used when a 

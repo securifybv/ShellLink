@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Text;
-using ShellLink.Internal;
+using Securify.ShellLink.Internal;
 using System.Runtime.InteropServices;
 
-namespace ShellLink.Structures
+namespace Securify.ShellLink.Structures
 {
     /// <summary>
     /// An ItemID is an element in an IDList structure. The data stored in a given ItemID is defined 

@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Text;
 using System.Linq;
-using ShellLink.Flags;
+using Securify.ShellLink.Flags;
 
-namespace ShellLink.Structures
+namespace Securify.ShellLink.Structures
 {
     /// <summary>
     /// The CommonNetworkRelativeLink structure specifies information about the network location where a 

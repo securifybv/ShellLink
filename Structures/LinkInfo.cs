@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Text;
 using System.Linq;
-using ShellLink.Flags;
+using Securify.ShellLink.Flags;
 
-namespace ShellLink.Structures
+namespace Securify.ShellLink.Structures
 {
     /// <summary>
     /// The LinkInfo structure specifies information necessary to resolve a link target if it is not found in its 

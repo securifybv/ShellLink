@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text;
 
-namespace ShellLink.Structures
+namespace Securify.ShellLink.Structures
 {
     /// <summary>
     /// The EnvironmentVariableDataBlock structure specifies a path to environment variable 

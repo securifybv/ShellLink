@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ShellLink.Flags
+namespace Securify.ShellLink.Flags
 {
     /// <summary>
     /// CommonNetworkRelativeLinkFlags (4 bytes): Flags that specify the contents of the 

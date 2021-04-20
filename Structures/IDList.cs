@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using ShellLink.Internal;
+using Securify.ShellLink.Internal;
 using System.Runtime.InteropServices;
 using System.Linq;
 
-namespace ShellLink.Structures
+namespace Securify.ShellLink.Structures
 {
     /// <summary>
     /// The stored IDList structure specifies the format of a persisted item ID list.

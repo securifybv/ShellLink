@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text;
 
-namespace ShellLink.Structures
+namespace Securify.ShellLink.Structures
 {
     /// <summary>
     /// EXTRA_DATA_BLOCK: A structure consisting of any one of the following property data blocks.

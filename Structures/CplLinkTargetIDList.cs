@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text;
 
-namespace ShellLink.Structures
+namespace Securify.ShellLink.Structures
 {
     /// <summary>
     /// Helper class to create an IDList to a Control Panel item

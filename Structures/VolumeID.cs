@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Text;
 using System.Linq;
-using ShellLink.Flags;
+using Securify.ShellLink.Flags;
 
-namespace ShellLink.Structures
+namespace Securify.ShellLink.Structures
 {
     /// <summary>
     /// The VolumeID structure specifies information about the volume that a link target was on when the link was 

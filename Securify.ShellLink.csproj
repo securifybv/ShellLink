@@ -10,6 +10,13 @@
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <PackageProjectUrl>https://github.com/securifybv/ShellLink</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/securifybv/ShellLink.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageId>Securify.ShellLink</PackageId>
+    <AssemblyName>Securify.ShellLink</AssemblyName>
+    <RootNamespace>Securify.ShellLink</RootNamespace>
+    <Version>1.1.0</Version>
   </PropertyGroup>
 
   <ItemGroup>

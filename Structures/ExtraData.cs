@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Text;
 
-namespace ShellLink.Structures
+namespace Securify.ShellLink.Structures
 {
     /// <summary>
     /// ExtraData refers to a set of structures that convey additional information about a link target. 

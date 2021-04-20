@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ShellLink.Flags
+namespace Securify.ShellLink.Flags
 {
     /// <summary>
     /// DriveType (4 bytes): A 32-bit, unsigned integer that specifies the type of drive the link target is stored on.

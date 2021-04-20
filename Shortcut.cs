@@ -2,10 +2,10 @@
 using System.IO;
 using System.Text;
 using System.Linq;
-using ShellLink.Flags;
-using ShellLink.Structures;
+using Securify.ShellLink.Flags;
+using Securify.ShellLink.Structures;
 
-namespace ShellLink
+namespace Securify.ShellLink
 {
     /// <summary>
     /// The Shortcut class can be used to process &amp; create Shell Link Binary File Format files.

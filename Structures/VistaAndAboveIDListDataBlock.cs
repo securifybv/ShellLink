@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Text;
 
-namespace ShellLink.Structures
+namespace Securify.ShellLink.Structures
 {
     /// <summary>
     /// The VistaAndAboveIDListDataBlock structure specifies an alternate IDList that can 

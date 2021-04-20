@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ShellLink.Flags
+namespace Securify.ShellLink.Flags
 {
     /// <summary>
     /// FillAttributes (2 bytes): A 16-bit, unsigned integer that specifies the fill 

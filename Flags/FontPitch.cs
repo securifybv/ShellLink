@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ShellLink.Flags
+namespace Securify.ShellLink.Flags
 {
     /// <summary>
     /// FontFamily (4 bytes): A 32-bit, unsigned integer that specifies the family of the 

@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Text;
-using ShellLink.Flags;
+using Securify.ShellLink.Flags;
 
-namespace ShellLink.Structures
+namespace Securify.ShellLink.Structures
 {
     /// <summary>
     /// The ConsoleDataBlock structure specifies the display settings to use when a 

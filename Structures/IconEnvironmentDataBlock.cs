@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text;
 
-namespace ShellLink.Structures
+namespace Securify.ShellLink.Structures
 {
     /// <summary>
     /// The IconEnvironmentDataBlock structure specifies the path to an icon. The path is encoded using 

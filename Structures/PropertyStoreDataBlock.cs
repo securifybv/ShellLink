@@ -4,7 +4,7 @@ using Securify.PropertyStore;
 using Securify.PropertyStore.Structures;
 using System.Collections.Generic;
 
-namespace ShellLink.Structures
+namespace Securify.ShellLink.Structures
 {
     /// <summary>
     /// A PropertyStoreDataBlock structure specifies a set of properties that can be used by 

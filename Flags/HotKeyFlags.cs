@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ShellLink.Flags
+namespace Securify.ShellLink.Flags
 {
     // https://support.microsoft.com/en-us/help/134552/shortcut-key-for-shortcut-does-not-work
     // TL;DR only on the desktop, on the Start menu, or in the Windows\Start Menu\Programs folder.
