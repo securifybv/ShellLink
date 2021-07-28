@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Authors>Yorick Koster</Authors>
+    <Company>Securify B.V.</Company>
+    <Product>ShellLink Class Library</Product>
+    <Description>A .NET Class Library for processing ShellLink (LNK) files</Description>
+    <Copyright>Copyright © 2017 Securify B.V.</Copyright>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <PackageProjectUrl>https://github.com/securifybv/ShellLink</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/securifybv/ShellLink.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageId>Securify.ShellLink</PackageId>
+    <AssemblyName>Securify.ShellLink</AssemblyName>
+    <RootNamespace>Securify.ShellLink</RootNamespace>
+    <Version>1.1.0</Version>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Securify.PropertyStore" Version="1.1.0" />
+  </ItemGroup>
+
+</Project>
